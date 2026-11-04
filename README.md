@@ -21,11 +21,9 @@ numerical functions and can take longer.
   and the final 5 s on the right.
 - `requirements.txt`: Python dependencies.
 
-The CSV voltage is applied directly in volts, with no voltage conversion in
-the model. Each value is held for 0.001 s. The model evolves continuously from
+The CSV voltage is applied directly in volts. Each value is held for 0.001 s. The model evolves continuously from
 fixed initial conditions without measured-output feedback or state resets.
-The internal RK4 step is at most 0.00005 s and may decrease for stability;
-input and output sampling remain 1000 Hz.
+
 
 ## Outputs
 
@@ -41,5 +39,4 @@ The returned array has one row per voltage sample and these columns:
 
 Pressure A is the rod-end chamber; pressure B is the cap-end chamber.
 The figure displays current in A, spool displacement in mm, pressures in bar,
-and actuator displacement in cm. These display conversions do not change
-the SI model calculations. No comparison data or error metrics are included.
+and actuator displacement in cm. 
